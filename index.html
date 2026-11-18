@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die besten Weihnachtsgeschenke unter 20 €</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #b91c1c; /* Weihnachts-Rot */
+            --primary-hover: #991b1b;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 2rem;
+            background: #fff;
+            padding: 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Filter Buttons */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Produkt Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #e5e7eb;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-amazon {
+            display: block;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-amazon:hover {
+            background-color: var(--primary-hover);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Weihnachtsgeschenke unter 20 €</h1>
+        <p>Handverlesene, geniale Geschenkideen, die garantiert Freude machen und dein Budget schonen.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Transparenzhinweis -->
+        <div class="disclaimer">
+            * Hinweis: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Für dich entstehen dabei keine Mehrkosten.
+        </div>
+
+        <!-- Filter-Navigation (Optional ausbaufähig) -->
+        <div class="filters">
+            <button class="filter-btn active">Alle anzeigen</button>
+            <button class="filter-btn">Für Kaffeeliebhaber</button>
+            <button class="filter-btn">Wichtelgeschenke</button>
+            <button class="filter-btn">Gadgets & Technik</button>
+            <button class="filter-btn">Kreatives & Deko</button>
+        </div>
+
+        <!-- Produkt-Raster -->
+        <div class="grid">
+
+            <!-- Produkt 1 -->
+            <div class="card">
+                <!-- Tausche das src-Bild und den Link gegen deine echten Amazon-Daten aus -->
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Produktbild" class="card-img">
+                <div class="card-content">
+                    <span class="card-category">Kaffeeliebhaber</span>
+                    <h3>Isolierter To-Go-Becher</h3>
+                    <p>Hält Kaffee stundenlang heiß und sieht extrem stylisch aus. Das perfekte Geschenk für Pendler und Kaffeefans.</p>
+                    <a href="DEIN_AMAZON_PARTNERLINK_HIER" target="_blank" rel="nofollow noopener" class="btn-amazon">Bei Amazon ansehen</a>
+                </div>
+            </div>
+
+            <!-- Produkt 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="Produktbild" class="card-img">
+                <div class="card-content">
+                    <span class="card-category">Wichtelgeschenke</span>
+                    <h3>Mini-Buchlampe zum Anklemmen</h3>
+                    <p>Ideal für Leseratten. Lässt sich direkt ans Buch klemmen und stört niemanden im abgedunkelten Raum.</p>
+                    <a href="DEIN_AMAZON_PARTNERLINK_HIER" target="_blank" rel="nofollow noopener" class="btn-amazon">Bei Amazon ansehen</a>
+                </div>
+            </div>
+
+            <!-- Produkt 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507643179773-3e175d251d87?auto=format&fit=crop&w=600&q=80" alt="Produktbild" class="card-img">
+                <div class="card-content">
+                    <span class="card-category">Gadgets & Technik</span>
+                    <h3>Kabelorganizer-Tasche</h3>
+                    <p>Schluss mit Kabelsalat auf Reisen. Klein, kompakt und extrem nützlich für alle Smartphone- und Technik-Nutzer.</p>
+                    <a href="DEIN_AMAZON_PARTNERLINK_HIER" target="_blank" rel="nofollow noopener" class="btn-amazon">Bei Amazon ansehen</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Geschenkideen-Guide. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
